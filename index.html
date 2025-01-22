@@ -6,65 +6,83 @@
   <title>Pradyumna Bada | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .hero-bg {
-      background-image: url('IMG_6653.jpg');
-      background-size: cover;
-      background-position: center;
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 2rem 0;
+      width: 90%;
     }
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.5);
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #2563eb;
     }
-    .bg-education {
-      background-image: url('UIUC.jpg');
-      background-size: cover;
-      background-position: center;
+    .timeline-item {
+      display: flex;
+      position: relative;
+      margin-bottom: 3rem;
     }
-    .bg-experience {
-      background-image: url('path/to/your/experience-image.jpg');
-      background-size: cover;
-      background-position: center;
+    .timeline-item:nth-child(odd) {
+      flex-direction: row-reverse;
     }
-    .bg-projects {
-      background-image: url('path/to/your/projects-image.jpg');
-      background-size: cover;
-      background-position: center;
+    .timeline-item .timeline-dot {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      background: #2563eb;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      z-index: 10;
     }
-    .bg-fun-activities {
-      background-image: url('path/to/your/fun-activities-image.jpg');
+    .timeline-item .content {
+      width: 45%;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+    }
+    .timeline-item:nth-child(odd) .content {
+      text-align: right;
+    }
+
+    .section-bg {
       background-size: cover;
       background-position: center;
     }
     .section-overlay {
       background: rgba(255, 255, 255, 0.8);
     }
-    .overlap-box {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 10;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      width: 75%;
-    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
   <!-- Hero Section -->
-  <header class="h-screen hero-bg flex items-center justify-center text-white">
-    <div class="hero-overlay w-full h-full flex items-center justify-center">
-      <div class="text-center">
+  <header class="h-screen section-bg" style="background-image: url('IMG_6653.jpg');">
+    <div class="bg-overlay w-full h-full flex items-center justify-center">
+      <div class="text-center text-white">
         <h1 class="text-5xl font-bold">Pradyumna Bada</h1>
         <p class="text-xl mt-4">Data Scientist | Industrial Engineer | Innovator</p>
-        <a href="#projects" class="mt-8 inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition">
-          View My Work
-        </a>
+        <a href="#projects" class="mt-8 inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition">View My Work</a>
       </div>
     </div>
   </header>
+
+  <!-- Highlights Overlap Section -->
+  <div class="absolute top-[90%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white p-6 shadow-lg rounded-lg w-11/12 max-w-3xl">
+    <h3 class="text-2xl font-bold mb-4 text-center">Key Highlights</h3>
+    <ul class="list-disc list-inside text-gray-600 space-y-2">
+      <li>Designed and developed innovative solutions for data analysis.</li>
+      <li>Contributed to impactful projects in data science and industrial engineering.</li>
+      <li>Experienced in automating workflows and creating interactive dashboards.</li>
+    </ul>
+  </div>
 
   <!-- Navigation -->
   <nav class="bg-white shadow-md fixed top-0 w-full z-50">
@@ -77,19 +95,10 @@
     </ul>
   </nav>
 
-  <!-- Sections -->
-  <div class="overlap-box">
-    <h3 class="text-xl font-semibold">Key Highlights</h3>
-    <ul class="list-disc list-inside text-gray-600">
-      <li>Highlight 1</li>
-      <li>Highlight 2</li>
-      <li>Highlight 3</li>
-    </ul>
-  </div>
-
-  <section id="education" class="py-16 bg-education relative">
+  <!-- Education Section -->
+  <section id="education" class="py-16 section-bg relative" style="background-image: url('UIUC.jpg');">
     <div class="section-overlay w-full h-full flex items-center justify-center">
-      <div class="container mx-auto text-center">
+      <div class="bg-white/80 p-10 rounded-lg mx-auto text-center max-w-4xl">
         <h2 class="text-3xl font-bold mb-8">Education</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-white shadow-lg rounded-lg p-6">
@@ -105,68 +114,49 @@
     </div>
   </section>
 
-  <section id="experience" class="py-16 bg-experience relative">
-    <div class="section-overlay w-full h-full flex items-center justify-center">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Experience</h2>
-        <div class="relative">
-          <div class="border-r-2 border-dotted border-gray-300 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-          <div class="mt-10 space-y-8">
-            <div class="flex items-center w-full">
-              <div class="w-1/2 pr-8 text-right">
-                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
-                  <h3 class="text-xl font-semibold">Graduate Research Assistant</h3>
-                  <p class="text-gray-600">Cline Center for Advanced Social Research</p>
-                </div>
-              </div>
-              <div class="w-1/2 relative flex justify-center">
-                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-              </div>
-            </div>
-            <div class="flex items-center w-full">
-              <div class="w-1/2 relative flex justify-center">
-                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-              </div>
-              <div class="w-1/2 pl-8 text-left">
-                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
-                  <h3 class="text-xl font-semibold">Summer Intern</h3>
-                  <p class="text-gray-600">Seagate Technology</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center w-full">
-              <div class="w-1/2 pr-8 text-right">
-                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
-                  <h3 class="text-xl font-semibold">Data Analyst Intern</h3>
-                  <p class="text-gray-600">XYZ Corporation</p>
-                </div>
-              </div>
-              <div class="w-1/2 relative flex justify-center">
-                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-              </div>
-            </div>
-            <div class="flex items-center w-full">
-              <div class="w-1/2 relative flex justify-center">
-                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-              </div>
-              <div class="w-1/2 pl-8 text-left">
-                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
-                  <h3 class="text-xl font-semibold">Project Manager</h3>
-                  <p class="text-gray-600">ABC Solutions</p>
-                </div>
-              </div>
-            </div>
+  <!-- Experience Section -->
+  <section id="experience" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="content">
+            <h3 class="text-xl font-semibold">Graduate Research Assistant</h3>
+            <p class="text-gray-600">Cline Center for Advanced Social Research</p>
           </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="content">
+            <h3 class="text-xl font-semibold">Summer Intern</h3>
+            <p class="text-gray-600">Seagate Technology</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="content">
+            <h3 class="text-xl font-semibold">Research Assistant</h3>
+            <p class="text-gray-600">RailTEC, University of Illinois</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="content">
+            <h3 class="text-xl font-semibold">Software Engineer</h3>
+            <p class="text-gray-600">Sapiens International Corporation</p>
+          </div>
+          <div class="timeline-dot"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="py-16 bg-projects">
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 section-bg" style="background-image: url('projects.jpg');">
     <div class="section-overlay w-full h-full flex items-center justify-center">
-      <div class="container mx-auto text-center">
+      <div class="bg-white/80 p-10 rounded-lg mx-auto text-center max-w-4xl">
         <h2 class="text-3xl font-bold mb-8">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-white shadow-lg rounded-lg p-6">
             <h3 class="text-xl font-semibold">Stock Forecasting App</h3>
             <p class="text-gray-600">Interactive app for sentiment analysis of stock news.</p>
@@ -180,9 +170,10 @@
     </div>
   </section>
 
-  <section id="fun-activities" class="py-16 bg-fun-activities">
+  <!-- Fun Activities Section -->
+  <section id="fun-activities" class="py-16 section-bg" style="background-image: url('fun-activities.jpg');">
     <div class="section-overlay w-full h-full flex items-center justify-center">
-      <div class="container mx-auto text-center">
+      <div class="bg-white/80 p-10 rounded-lg mx-auto text-center max-w-4xl">
         <h2 class="text-3xl font-bold mb-8">Fun Activities</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <iframe class="rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/bptLk0r8qOE" allowfullscreen></iframe>
@@ -194,7 +185,7 @@
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6">
-    <p class="text-center">© 2025 Pradyumna Bada | Connect with me on <a href="https://www.linkedin.com" class="text-blue-400">LinkedIn</a></p>
+    <p class="text-center">&copy; 2025 Pradyumna Bada | Connect with me on <a href="https://www.linkedin.com" class="text-blue-400">LinkedIn</a></p>
   </footer>
 
 </body>
