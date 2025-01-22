@@ -5,17 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pradyumna Bada | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-bg {
+      background-image: url('path/to/your/hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .bg-education {
+      background-image: url('path/to/your/education-image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .bg-experience {
+      background-image: url('path/to/your/experience-image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .bg-projects {
+      background-image: url('path/to/your/projects-image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .bg-fun-activities {
+      background-image: url('path/to/your/fun-activities-image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .section-overlay {
+      background: rgba(255, 255, 255, 0.8);
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
   <!-- Hero Section -->
-  <header class="h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white">
-    <div class="text-center">
-      <h1 class="text-5xl font-bold">Pradyumna Bada</h1>
-      <p class="text-xl mt-4">Data Scientist | Industrial Engineer | Innovator</p>
-      <a href="#projects" class="mt-8 inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition">
-        View My Work
-      </a>
+  <header class="h-screen hero-bg flex items-center justify-center text-white">
+    <div class="hero-overlay w-full h-full flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-5xl font-bold">Pradyumna Bada</h1>
+        <p class="text-xl mt-4">Data Scientist | Industrial Engineer | Innovator</p>
+        <a href="#projects" class="mt-8 inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition">
+          View My Work
+        </a>
+      </div>
     </div>
   </header>
 
@@ -31,60 +66,68 @@
   </nav>
 
   <!-- Sections -->
-  <section id="education" class="py-16 bg-gray-100">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Education</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="text-xl font-semibold">Master’s in Industrial Engineering</h3>
-          <p class="text-gray-600">University of Illinois at Urbana-Champaign</p>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="text-xl font-semibold">Bachelor’s in Industrial Engineering</h3>
-          <p class="text-gray-600">JSS Science and Technology University</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="py-16 bg-gray-200">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Experience</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="text-xl font-semibold">Graduate Research Assistant</h3>
-          <p class="text-gray-600">Cline Center for Advanced Social Research</p>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="text-xl font-semibold">Summer Intern</h3>
-          <p class="text-gray-600">Seagate Technology</p>
+  <section id="education" class="py-16 bg-education">
+    <div class="section-overlay w-full h-full flex items-center justify-center">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Education</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold">Master’s in Industrial Engineering</h3>
+            <p class="text-gray-600">University of Illinois at Urbana-Champaign</p>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold">Bachelor’s in Industrial Engineering</h3>
+            <p class="text-gray-600">JSS Science and Technology University</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="py-16 bg-gray-100">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="text-xl font-semibold">Stock Forecasting App</h3>
-          <p class="text-gray-600">Interactive app for sentiment analysis of stock news.</p>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="text-xl font-semibold">Automated Data Analysis</h3>
-          <p class="text-gray-600">Built pipelines for semiconductor test data at Seagate.</p>
+  <section id="experience" class="py-16 bg-experience">
+    <div class="section-overlay w-full h-full flex items-center justify-center">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold">Graduate Research Assistant</h3>
+            <p class="text-gray-600">Cline Center for Advanced Social Research</p>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold">Summer Intern</h3>
+            <p class="text-gray-600">Seagate Technology</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="fun-activities" class="py-16 bg-gray-200">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Fun Activities</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <iframe class="rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/bptLk0r8qOE" allowfullscreen></iframe>
-        <iframe class="rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/nWwHes5_eGA" allowfullscreen></iframe>
+  <section id="projects" class="py-16 bg-projects">
+    <div class="section-overlay w-full h-full flex items-center justify-center">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold">Stock Forecasting App</h3>
+            <p class="text-gray-600">Interactive app for sentiment analysis of stock news.</p>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold">Automated Data Analysis</h3>
+            <p class="text-gray-600">Built pipelines for semiconductor test data at Seagate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fun-activities" class="py-16 bg-fun-activities">
+    <div class="section-overlay w-full h-full flex items-center justify-center">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Fun Activities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <iframe class="rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/bptLk0r8qOE" allowfullscreen></iframe>
+          <iframe class="rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/nWwHes5_eGA" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </section>
