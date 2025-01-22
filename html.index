@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradyumna Bada | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#fun-activities">Fun Activities</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="summary">
+    <h1>Pradyumna Bada</h1>
+    <p>Graduate student specializing in Data Science and Industrial Engineering.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>Master’s in Industrial Engineering, University of Illinois, Urbana-Champaign.</p>
+    <button onclick="toggleDetails('edu-details')">More Details</button>
+    <div id="edu-details" class="hidden">
+      <p>Bachelor’s in Industrial Engineering, JSS Science and Technology University.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>Graduate Research Assistant, Cline Center for Advanced Social Research.</p>
+    <button onclick="toggleDetails('exp-details')">More Details</button>
+    <div id="exp-details" class="hidden">
+      <p>Interned at Seagate Technology, developed automated data analysis pipelines.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Interactive stock forecasting app, AI-based data extraction system, and more.</p>
+    <button onclick="toggleDetails('proj-details')">More Details</button>
+    <div id="proj-details" class="hidden">
+      <p>Details about individual projects with links to GitHub repositories.</p>
+    </div>
+  </section>
+
+  <section id="fun-activities">
+    <h2>Fun Activities</h2>
+    <p>Explore my vlogs:</p>
+    <div class="video-gallery">
+      <iframe width="560" height="315" src="https://youtube.com/shorts/bptLk0r8qOE?feature=shared" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=nWwHes5_eGA" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pradyumna Bada</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      details.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
