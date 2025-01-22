@@ -37,6 +37,18 @@
     .section-overlay {
       background: rgba(255, 255, 255, 0.8);
     }
+    .overlap-box {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      width: 75%;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -66,7 +78,16 @@
   </nav>
 
   <!-- Sections -->
-  <section id="education" class="py-16 bg-education">
+  <div class="overlap-box">
+    <h3 class="text-xl font-semibold">Key Highlights</h3>
+    <ul class="list-disc list-inside text-gray-600">
+      <li>Highlight 1</li>
+      <li>Highlight 2</li>
+      <li>Highlight 3</li>
+    </ul>
+  </div>
+
+  <section id="education" class="py-16 bg-education relative">
     <div class="section-overlay w-full h-full flex items-center justify-center">
       <div class="container mx-auto text-center">
         <h2 class="text-3xl font-bold mb-8">Education</h2>
@@ -84,18 +105,57 @@
     </div>
   </section>
 
-  <section id="experience" class="py-16 bg-experience">
+  <section id="experience" class="py-16 bg-experience relative">
     <div class="section-overlay w-full h-full flex items-center justify-center">
       <div class="container mx-auto text-center">
         <h2 class="text-3xl font-bold mb-8">Experience</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold">Graduate Research Assistant</h3>
-            <p class="text-gray-600">Cline Center for Advanced Social Research</p>
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold">Summer Intern</h3>
-            <p class="text-gray-600">Seagate Technology</p>
+        <div class="relative">
+          <div class="border-r-2 border-dotted border-gray-300 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+          <div class="mt-10 space-y-8">
+            <div class="flex items-center w-full">
+              <div class="w-1/2 pr-8 text-right">
+                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
+                  <h3 class="text-xl font-semibold">Graduate Research Assistant</h3>
+                  <p class="text-gray-600">Cline Center for Advanced Social Research</p>
+                </div>
+              </div>
+              <div class="w-1/2 relative flex justify-center">
+                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+              </div>
+            </div>
+            <div class="flex items-center w-full">
+              <div class="w-1/2 relative flex justify-center">
+                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+              </div>
+              <div class="w-1/2 pl-8 text-left">
+                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
+                  <h3 class="text-xl font-semibold">Summer Intern</h3>
+                  <p class="text-gray-600">Seagate Technology</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center w-full">
+              <div class="w-1/2 pr-8 text-right">
+                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
+                  <h3 class="text-xl font-semibold">Data Analyst Intern</h3>
+                  <p class="text-gray-600">XYZ Corporation</p>
+                </div>
+              </div>
+              <div class="w-1/2 relative flex justify-center">
+                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+              </div>
+            </div>
+            <div class="flex items-center w-full">
+              <div class="w-1/2 relative flex justify-center">
+                <div class="bg-blue-600 w-6 h-6 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+              </div>
+              <div class="w-1/2 pl-8 text-left">
+                <div class="bg-white shadow-lg rounded-lg p-6 inline-block">
+                  <h3 class="text-xl font-semibold">Project Manager</h3>
+                  <p class="text-gray-600">ABC Solutions</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
