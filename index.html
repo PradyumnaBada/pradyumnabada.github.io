@@ -320,90 +320,56 @@
         <!-- Project 3 -->
         <div
           class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
-          onclick="window.open('https://github.com/PradyumnaBada/Twitter_Sentiment_Analysis', '_blank')"
-        >
-          <img src="tweet_disaster.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
-          <div class="absolute inset-x-0 bottom-4 text-center">
+            onclick="window.open('https://github.com/PradyumnaBada/Twitter_Sentiment_Analysis', '_blank')"
+            >
+            <img src="tweet_disaster.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+            <div class="absolute inset-x-0 bottom-4 text-center">
             <p class="text-white text-lg font-bold">DISASTER TWEETS</p>
             <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
               Built a machine learning model to classify tweets related to disasters for emergency response planning.
             </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+
+        <!-- Extracurriculars Section -->
+        <section id="extracurriculars" class="py-16 section-bg relative" style="background-image: url('extra_1.jpg');">
+          <div class="section-overlay w-full h-full flex items-center justify-center">
+            <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-bold mb-8 text-white">EXTRACURRICULARS</h2>
+              <div class="grid grid-cols-12 gap-6">
+                <!-- Main content on the left -->
+                <div class="col-span-9">
+                  <div class="p-6 rounded-lg shadow-lg ml-[100px] w-3/4 h-[250px] mt-16" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <ul class="list-disc text-left pl-6">
+                      <li class="text-gray-200 mb-4"> Completed certification courses like Applied Machine Learning, Applied Plotting & Data Representation in Python, and more.</li>
+                      <li class="text-gray-200 mb-4">Organized multiple treks to the Great Himalayan Ranges for groups of more than 10.</li>
+                      <li class="text-gray-200 mb-4">Directed and acted in short films, cover songs, and created travel vlogs.</li>
+                      <li class="text-gray-200 mb-4">Sapiens WOW Performer (2021) & Sapiens Best Singer - L&P Division (2021). </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Videos on the right -->
+                <div class="col-span-3 flex flex-col space-y-6">
+                  <iframe class="rounded-lg shadow-lg" width="100%" height="200" src="https://www.youtube.com/embed/bptLk0r8qOE" allowfullscreen></iframe>
+                  <iframe class="rounded-lg shadow-lg" width="100%" height="200" src="https://www.youtube.com/embed/nWwHes5_eGA" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
 
-
-<!-- Extracurriculars Section -->
-<section id="extracurriculars" class="py-16 section-bg" style="background-image: url('fun-activities.jpg');">
-  <div class="section-overlay w-full h-full flex items-center justify-center">
-    <div class="bg-white/80 p-10 rounded-lg mx-auto text-center max-w-4xl glowing-border">
-      <h2 class="text-3xl font-bold mb-8 section-header">EXTRACURRICULARS</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <iframe
-          class="rounded-lg shadow-lg video-frame"
-          width="100%"
-          height="315"
-          data-src="https://www.youtube.com/embed/bptLk0r8qOE?autoplay=1"
-          allowfullscreen>
-        </iframe>
-        <iframe
-          class="rounded-lg shadow-lg video-frame"
-          width="100%"
-          height="315"
-          data-src="https://www.youtube.com/embed/nWwHes5_eGA?autoplay=1"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  // Function to check if the section is visible in the viewport
-  function isSectionVisible(section) {
-    const rect = section.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  // Function to load videos when the section is visible
-  function loadVideos() {
-    const section = document.querySelector("#extracurriculars");
-    const videoFrames = document.querySelectorAll(".video-frame");
-
-    if (isSectionVisible(section)) {
-      videoFrames.forEach((frame) => {
-        if (!frame.src) {
-          frame.src = frame.getAttribute("data-src");
-        }
-      });
-      // Remove the scroll event listener once videos are loaded
-      window.removeEventListener("scroll", loadVideos);
-    }
-  }
-
-  // Add a scroll event listener to check for visibility
-  window.addEventListener("scroll", loadVideos);
-
-  // Initial check in case the section is already in view
-  loadVideos();
-</script>
-
-
-
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6">
-    <p class="text-center">&copy; 2025 Pradyumna Bada | Connect with me on <a href="https://www.linkedin.com" class="text-blue-400">LinkedIn</a></p>
-  </footer>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6">
+  <p class="text-center">&copy; 2025 Pradyumna Bada | Connect with me on <a href="https://www.linkedin.com" class="text-blue-400">LinkedIn</a></p>
+  <p class="text-center mt-2">Contact: <a href="mailto:pbada2@illinois.edu" class="text-blue-400">pbada2@illinois.edu</a> | Phone: +1 (217) 200-3976</p>
+  <p class="text-center text-gray-400 mt-4">Credit: Website designed with the help of GitHub Copilot and ChatGPT.</p>
+</footer>
 
 </body>
 </html>
+
