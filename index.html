@@ -90,90 +90,6 @@
       background: #4F46E5;
       box-shadow: 0 0 8px #4F46E5;
     }
-    @media (max-width: 768px) {
-      .timeline-item {
-        flex-direction: column;
-        align-items: center;
-      }
-      .timeline-item .content {
-        width: 90%;
-        text-align: center;
-      }
-      .timeline-item:nth-child(odd) .content {
-        text-align: center;
-      }
-      .timeline-item .timeline-dot {
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .absolute {
-        position: static;
-        transform: none;
-      }
-      .container {
-        padding: 0 1rem;
-      }
-      .grid-cols-12 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
-      .col-span-9, .col-span-3 {
-        grid-column: span 1 / span 1;
-      }
-      .ml-[100px] {
-        margin-left: 0;
-      }
-      .w-3/4 {
-        width: 100%;
-      }
-      .h-[250px] {
-        height: auto;
-      }
-      .mt-16 {
-        margin-top: 1rem;
-      }
-      .text-5xl {
-        font-size: 2.5rem;
-      }
-      .text-4xl {
-        font-size: 2rem;
-      }
-      .text-3xl {
-        font-size: 1.75rem;
-      }
-      .text-2xl {
-        font-size: 1.5rem;
-      }
-      .text-xl {
-        font-size: 1.25rem;
-      }
-      .py-16 {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-      .py-6 {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-      }
-      .px-6 {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-      .mb-8 {
-        margin-bottom: 2rem;
-      }
-      .mb-4 {
-        margin-bottom: 1rem;
-      }
-      .mt-4 {
-        margin-top: 1rem;
-      }
-      .mt-2 {
-        margin-top: 0.5rem;
-      }
-      .mb-6 {
-        margin-bottom: 1.5rem;
-      }
-    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -201,11 +117,12 @@
 
 
 
-  <div class="absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-6 shadow-lg rounded-lg w-10/12 max-w-5xl" style="background: rgba(255, 255, 255, 0.85); box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border: 2px solid; border-image-source: linear-gradient(45deg, #00FFFF, #FF69B4); border-image-slice: 1;">
-    <p class="text-gray-800 text-lg leading-relaxed text-justify font-bold" style="text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 20px rgba(79, 70, 229, 0.6);">
-      I am Pradyumna Bada, a master’s student at <a href="https://grainger.illinois.edu/" target="_blank" class="text-blue-500 hover:underline">UIUC</a>, specializing in <a href="http://catalog.illinois.edu/graduate/engineering/concentration/advanced-analytics-industrial-enterprise-systems-engineering/" target="_blank" class="text-blue-500 hover:underline">Advanced Analytics</a>. I have previously worked at Seagate, Sapiens, and RailTEC, where I contributed to data management, process optimization, and AI-driven automation to enhance efficiency and innovation. I love solving challenging problems and look forward to applying my expertise to help organizations thrive in a data-driven world.
-    </p>
-  </div>
+<div class="absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-6 rounded-lg w-10/12 max-w-5xl backdrop-blur-md" style="background: rgba(255, 255, 255, 0.1); box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.3);">
+  <p class="text-white text-lg leading-relaxed text-justify font-bold" style="text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 15px rgba(0, 0, 0, 0.6);">
+    I am Pradyumna Bada, a master’s student at <a href="https://grainger.illinois.edu/" target="_blank" class="text-blue-400 hover:underline">UIUC</a>, specializing in <a href="http://catalog.illinois.edu/graduate/engineering/concentration/advanced-analytics-industrial-enterprise-systems-engineering/" target="_blank" class="text-blue-400 hover:underline">Advanced Analytics</a>. I have previously worked at Seagate, Sapiens, and RailTEC, where I contributed to data management, process optimization, and AI-driven automation to enhance efficiency and innovation. I love solving challenging problems and look forward to applying my expertise to help organizations thrive in a data-driven world.
+  </p>
+</div>
+
   
   
   
@@ -219,7 +136,7 @@
       <div class="backdrop-blur-md bg-white/10 p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300 max-w-lg mx-auto" style="opacity: 0.95; border: 1px solid rgba(255, 255, 255, 0.2); min-height: 20rem;">
         <h3 class="text-2xl font-semibold text-white" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Master’s in Advanced Analytics</h3>
         <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">University of Illinois at Urbana-Champaign</p>
-        <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduation: May 2025</p>
+        <p class="text-gray-200 text-sm" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduation: May 2025</p>
         <p class="text-gray-200 font-semibold mt-4" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Courses:</p>
         <ul class="text-gray-300 list-disc list-inside space-y-1" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">
           <li>Advanced Data Analytics</li>
