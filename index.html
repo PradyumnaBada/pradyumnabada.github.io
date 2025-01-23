@@ -174,7 +174,7 @@
       <li><a href="#education" class="hover:text-blue-500 glow-link">Education</a></li>
       <li><a href="#experience" class="hover:text-blue-500 glow-link">Experience</a></li>
       <li><a href="#projects" class="hover:text-blue-500 glow-link">Projects</a></li>
-      <li><a href="#fun-activities" class="hover:text-blue-500 glow-link">Fun Activities</a></li>
+      <li><a href="#extracurriculars" class="hover:text-blue-500 glow-link">Extracurriculars</a></li>
     </ul>
   </nav>
 
@@ -337,18 +337,68 @@
 
 
 
-  <!-- Fun Activities Section -->
-  <section id="fun-activities" class="py-16 section-bg" style="background-image: url('fun-activities.jpg');">
-    <div class="section-overlay w-full h-full flex items-center justify-center">
-      <div class="bg-white/80 p-10 rounded-lg mx-auto text-center max-w-4xl glowing-border">
-        <h2 class="text-3xl font-bold mb-8 section-header">Fun Activities</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <iframe class="rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/bptLk0r8qOE" allowfullscreen></iframe>
-          <iframe class="rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/nWwHes5_eGA" allowfullscreen></iframe>
-        </div>
+<!-- Extracurriculars Section -->
+<section id="extracurriculars" class="py-16 section-bg" style="background-image: url('fun-activities.jpg');">
+  <div class="section-overlay w-full h-full flex items-center justify-center">
+    <div class="bg-white/80 p-10 rounded-lg mx-auto text-center max-w-4xl glowing-border">
+      <h2 class="text-3xl font-bold mb-8 section-header">EXTRACURRICULARS</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <iframe
+          class="rounded-lg shadow-lg video-frame"
+          width="100%"
+          height="315"
+          data-src="https://www.youtube.com/embed/bptLk0r8qOE?autoplay=1"
+          allowfullscreen>
+        </iframe>
+        <iframe
+          class="rounded-lg shadow-lg video-frame"
+          width="100%"
+          height="315"
+          data-src="https://www.youtube.com/embed/nWwHes5_eGA?autoplay=1"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  // Function to check if the section is visible in the viewport
+  function isSectionVisible(section) {
+    const rect = section.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to load videos when the section is visible
+  function loadVideos() {
+    const section = document.querySelector("#extracurriculars");
+    const videoFrames = document.querySelectorAll(".video-frame");
+
+    if (isSectionVisible(section)) {
+      videoFrames.forEach((frame) => {
+        if (!frame.src) {
+          frame.src = frame.getAttribute("data-src");
+        }
+      });
+      // Remove the scroll event listener once videos are loaded
+      window.removeEventListener("scroll", loadVideos);
+    }
+  }
+
+  // Add a scroll event listener to check for visibility
+  window.addEventListener("scroll", loadVideos);
+
+  // Initial check in case the section is already in view
+  loadVideos();
+</script>
+
+
+
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6">
