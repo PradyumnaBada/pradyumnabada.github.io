@@ -165,36 +165,80 @@
   </nav>
 
   <!-- Experience Section -->
-  <section id="experience" class="py-16 section-bg relative" style="background-image: url('experience.jpg');">
+  <section id="experience" class="py-16 section-bg relative" style="background-image: url('experience_2.jpg'); background-size: cover; background-position: center;">
     <div class="section-overlay w-full h-full flex items-center justify-center">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8 text-white">Experience</h2>
+      <div class="container mx-auto text-center text-white">
+        <h2 class="text-3xl font-bold mb-8">Professional Experience</h2>
         <div class="timeline">
+          <!-- Experience 1 -->
           <div class="timeline-item">
-            <div class="content bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold">Graduate Research Assistant</h3>
-              <p class="text-gray-600">Cline Center for Advanced Social Research</p>
+            <div class="content p-6 rounded-lg shadow-lg relative" style="background: rgba(255, 255, 255, 0.9); border: 1px solid #e0e0e0;">
+              <h3 class="text-2xl font-extrabold text-gray-800">Research Assistant</h3>
+              <p class="text-xl font-bold text-gray-600">Cline Center for Advanced Social Research</p>
+              <p class="text-sm text-gray-600 mb-4">Sep 2023 – Present</p>
+              <img src="cline_center_logo.png" alt="Cline Center Logo" class="absolute top-4 left-4 h-12 w-auto">
+              <ul class="list-disc list-inside text-gray-600 text-left">
+                <li>Leveraged LLMs to extract structured data from unstructured text (news articles), specifically tracking police use of lethal force.</li>
+                <div id="cline-more" class="hidden">
+                  <li>Specialized in data cleaning, analysis, schema design, <strong>DDL</strong>, <strong>DML</strong>. Built a national dashboard using <strong>MySQL</strong> & <strong>Power BI</strong>.</li>
+                  <li>Built retrieval models using embeddings for ranking data and clustering articles to automate the data extraction process.</li>
+                </div>
+              </ul>
+              <button onclick="toggleDetails('cline-more', this)" class="text-blue-500 hover:underline">More</button>
             </div>
             <div class="timeline-dot"></div>
           </div>
+          <!-- Experience 2 -->
           <div class="timeline-item">
-            <div class="content bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold">Summer Intern</h3>
-              <p class="text-gray-600">Seagate Technology</p>
+            <div class="content p-6 rounded-lg shadow-lg relative text-left" style="background: rgba(255, 255, 255, 0.9); border: 1px solid #e0e0e0;">
+              <h3 class="text-2xl font-extrabold text-gray-800">Data Analyst Intern</h3>
+              <p class="text-xl font-bold text-gray-600">Seagate Technology</p>
+              <p class="text-sm text-gray-600 mb-4">May 2024 – Aug 2024</p>
+              <img src="seagate_logo.jpg" alt="Seagate Logo" class="absolute top-4 right-4 h-12 w-auto">
+              <ul class="list-disc list-inside text-gray-600">
+                <li>Analyzed Volume Data using statistical tools and data visualization to help characterize emerging memories.</li>
+                <div id="seagate-more" class="hidden">
+                  <li>Developed <strong>Python</strong>-based automation & reporting systems, utilizing <strong>Jenkins</strong>, <strong>GitLab</strong>, and other technologies to streamline operations.</li>
+                  <li>Calculated failure metrics, including Bit Error Rates across address levels, and modeled CFR to predict potential failures.</li>
+                </div>
+              </ul>
+              <button onclick="toggleDetails('seagate-more', this)" class="text-blue-500 hover:underline">More</button>
             </div>
             <div class="timeline-dot"></div>
           </div>
+          <!-- Experience 3 -->
           <div class="timeline-item">
-            <div class="content bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold">Research Assistant</h3>
-              <p class="text-gray-600">RailTEC, University of Illinois</p>
+            <div class="content p-6 rounded-lg shadow-lg relative" style="background: rgba(255, 255, 255, 0.9); border: 1px solid #e0e0e0;">
+              <h3 class="text-2xl font-extrabold text-gray-800">Summer Research Intern</h3>
+              <p class="text-xl font-bold text-gray-600">RailTEC at Illinois</p>
+              <p class="text-sm text-gray-600 mb-4">May 2023 – Aug 2023</p>
+              <img src="railtec_logo.jpg" alt="RailTEC Logo" class="absolute top-4 left-4 h-12 w-auto">
+              <ul class="list-disc list-inside text-gray-600 text-left">
+                <li>Implemented <strong>Big Data Analytics</strong> to ensure safe railway operations, by using <strong>LRAIL</strong>, an AI-based system for Visual Track Inspection.</li>
+                <div id="railtec-more" class="hidden">
+                  <li>Analyzed periodic data to track & forecast the health of rail components by leveraging <strong>PySpark</strong> and <strong>MS Azure Synapse Analytics</strong>.</li>
+                  <li>Visualized data with <strong>Power BI</strong> and <strong>Python</strong> to provide actionable insights for efficient decision-making.</li>
+                </div>
+              </ul>
+              <button onclick="toggleDetails('railtec-more', this)" class="text-blue-500 hover:underline">More</button>
             </div>
             <div class="timeline-dot"></div>
           </div>
+          <!-- Experience 4 -->
           <div class="timeline-item">
-            <div class="content bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold">Software Engineer</h3>
-              <p class="text-gray-600">Sapiens International Corporation</p>
+            <div class="content p-6 rounded-lg shadow-lg relative text-left" style="background: rgba(255, 255, 255, 0.9); border: 1px solid #e0e0e0;">
+              <h3 class="text-2xl font-extrabold text-gray-800">SQL Developer</h3>
+              <p class="text-xl font-bold text-gray-600">Sapiens International Corporation</p>
+              <p class="text-sm text-gray-600 mb-4">Mar 2021 – Nov 2022</p>
+              <img src="Sapiens_logo.jpg" alt="Sapiens Logo" class="absolute top-4 right-4 h-12 w-auto">
+              <ul class="list-disc list-inside text-gray-600">
+                <li>Enhanced our Insurtech product using <strong>Oracle SQL</strong>, and <strong>ETL</strong>, which helped companies administer legacy <strong>Insurance</strong> products.</li>
+                <div id="sapiens-more" class="hidden">
+                  <li>Expertly managed datasets encompassing policy, claims, customer, and fund prices, and crafted complex SQL data fix scripts.</li>
+                  <li>Developed reporting interfaces using <strong>SQL</strong> and <strong>Shell Scripting</strong>, including 'ECASS,' a cache facility designed for client’s actuarial team.</li>
+                </div>
+              </ul>
+              <button onclick="toggleDetails('sapiens-more', this)" class="text-blue-500 hover:underline">More</button>
             </div>
             <div class="timeline-dot"></div>
           </div>
@@ -203,24 +247,102 @@
     </div>
   </section>
 
+  <script>
+    function toggleDetails(id, button) {
+      const element = document.getElementById(id);
+      if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+        button.textContent = "Less";
+      } else {
+        element.classList.add('hidden');
+        button.textContent = "More";
+      }
+    }
+  </script>
+
+
+
+<script>
+  function toggleDetails(id, button) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+      element.classList.remove('hidden');
+      button.textContent = "Less";
+    } else {
+      element.classList.add('hidden');
+      button.textContent = "More";
+    }
+  }
+</script>
+
+<script>
+  function toggleDetails(id, button) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+      element.classList.remove('hidden');
+      button.textContent = "Less";
+    } else {
+      element.classList.add('hidden');
+      button.textContent = "More";
+    }
+  }
+</script>
+
+
+
+
   <!-- Projects Section -->
-  <section id="projects" class="py-16 section-bg" style="background-image: url('projects.jpg');">
-    <div class="section-overlay w-full h-full flex items-center justify-center">
-      <div class="bg-white/80 p-10 rounded-lg mx-auto text-center max-w-4xl glowing-border">
-        <h2 class="text-3xl font-bold mb-8 section-header">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold">Stock Forecasting App</h3>
-            <p class="text-gray-600">Interactive app for sentiment analysis of stock news.</p>
+  <section id="projects" class="py-16 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-white mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+          onclick="window.open('https://github.com/PradyumnaBada/Stock-forecasting', '_blank')"
+        >
+          <img src="forecasting.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+          <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">STOCK FORECASTING</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Developed an interactive app for predicting stock prices using sentiment analysis of financial news.
+            </p>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold">Automated Data Analysis</h3>
-            <p class="text-gray-600">Built pipelines for semiconductor test data at Seagate.</p>
+        </div>
+        <!-- Project 2 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+          onclick="window.open('https://github.com/username/project2', '_blank')"
+        >
+          <img src="milling_machine_ai.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+          <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">PREDICTIVE MAINTENANCE</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Designed an ML model to predict failures in industrial milling machines, reducing downtime.
+            </p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+          onclick="window.open('https://github.com/PradyumnaBada/Twitter_Sentiment_Analysis', '_blank')"
+        >
+          <img src="tweet_disaster.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+          <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">DISASTER TWEETS</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Built a machine learning model to classify tweets related to disasters for emergency response planning.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- Fun Activities Section -->
   <section id="fun-activities" class="py-16 section-bg" style="background-image: url('fun-activities.jpg');">
