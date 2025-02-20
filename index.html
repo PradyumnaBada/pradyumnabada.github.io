@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pradyumna Bada | Portfolio</title>
+  <meta property="og:title" content="Pradyumna Bada | Portfolio">
+  <meta property="og:description" content="Welcome to Pradyumna Bada's personal website. Explore my portfolio, projects, and experience.">
+  <meta property="og:image" content="AI_gen_2.jpg">
+  <meta property="og:url" content="https://pradyumnabada.github.io/">
+  <meta property="og:type" content="website">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .timeline {
@@ -73,8 +78,8 @@
       transition: all 0.3s;
     }
     .neon-button:hover {
-      background: #FF69B4;
-      box-shadow: 0 0 10px #FF69B4, 0 0 20px #FF69B4;
+      background: #10B981;
+      box-shadow: 0 0 10px #10B981, 0 0 20px #10B981;
     }
 
     .glow-link {
@@ -90,21 +95,18 @@
       background: #4F46E5;
       box-shadow: 0 0 8px #4F46E5;
     }
-  </style>
-  <meta property="og:title" content="Pradyumna Bada | Portfolio">
-  <meta property="og:description" content="Welcome to Pradyumna Bada's personal website. Explore my portfolio, projects, and experience.">
-  <meta property="og:image" content="AI_gen_2.jpg">
-  <meta property="og:url" content="https://pradyumnabada.github.io/">
-  <meta property="og:type" content="website">
-</head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800 font-sans">
 
-<!-- Hero Section -->
-<header id="hero" class="h-screen section-bg" style="background-image: url('AI_gen_2.jpg');">
-  <div class="bg-overlay w-full h-full flex items-center justify-center">
+  <!-- Hero Section -->
+  <header id="hero" class="h-screen section-bg" style="background-image: url('AI_gen_2.jpg');">
+    <div class="bg-overlay w-full h-full flex items-center justify-center">
     <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center"> <!-- Adjusted from bottom-32 to bottom-20 -->
       <h1 class="text-5xl font-bold neon-text">PRADYUMNA BADA</h1>
-      <p class="text-xl mt-4 neon-text">Data Scientist | Industrial Engineer | Problem Solver</p>
+      <p class="text-xl mt-4 neon-text" style="background: linear-gradient(to right, #4F46E5, #10B981); padding: 0.5rem 1rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+      Data Scientist | Industrial Engineer | Problem Solver
+      </p>
       <a href="Pradyumna Resume Analyst .pdf" 
         class="mt-2 mb-6 inline-block neon-button font-semibold py-3 px-6 rounded-lg" 
         download="Pradyumna_Resume_Analyst.pdf" 
@@ -132,13 +134,13 @@
   
   
 <!-- Education Section -->
-<section id="education" class="relative h-screen section-bg" style="background-image: url('UIUC.jpg'); background-size: cover; background-position: center;">
+<section id="education" class="relative h-[110vh] section-bg" style="background-image: url('UIUC.jpg'); background-size: cover; background-position: center;">
   <div class="absolute inset-0 bg-black/40"></div>
-  <div class="relative z-10 container mx-auto text-center pt-36 pb-24">
+  <div class="relative z-10 container mx-auto text-center pt-36 pb-24" style="transform: translateY(5%);">
     <h2 class="text-4xl font-bold text-white mb-12" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">EDUCATION</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Master's Card -->
-      <div class="backdrop-blur-md bg-white/10 p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300 max-w-lg mx-auto" style="opacity: 0.95; border: 1px solid rgba(255, 255, 255, 0.2); min-height: 20rem;">
+      <div class="backdrop-blur-md bg-white/5 p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300 max-w-lg mx-auto" style="opacity: 0.85; border: 1px solid rgba(255, 255, 255, 0.2); min-height: 20rem;">
         <h3 class="text-2xl font-semibold text-white" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Master’s in Advanced Analytics</h3>
         <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">University of Illinois at Urbana-Champaign</p>
         <p class="text-gray-200 text-sm" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduation: May 2025</p>
@@ -151,7 +153,7 @@
         </ul>
       </div>
       <!-- Bachelor's Card -->
-      <div class="backdrop-blur-md bg-white/10 p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300 max-w-lg mx-auto" style="opacity: 0.95; border: 1px solid rgba(255, 255, 255, 0.2); min-height: 20rem;">
+      <div class="backdrop-blur-md bg-white/5 p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300 max-w-lg mx-auto" style="opacity: 0.85; border: 1px solid rgba(255, 255, 255, 0.2); min-height: 20rem;">
         <h3 class="text-2xl font-semibold text-white" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Bachelor’s in Industrial Engineering</h3>
         <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">JSS Science and Technology University</p>
         <p class="text-gray-200 text-sm" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduated: June 2020</p>
@@ -164,7 +166,6 @@
         </ul>
       </div>
     </div>
-  </div>
 </section>
 
 
@@ -172,15 +173,68 @@
 
 
   <!-- Navigation -->
-  <nav class="bg-white shadow-md fixed top-0 w-full z-50">
+  <nav class="bg-[#001f3f] shadow-md fixed top-0 w-full z-50">
     <ul class="flex justify-center space-x-6 py-4">
-      <li><a href="#hero" class="hover:text-blue-500 glow-link">Home</a></li>
-      <li><a href="#education" class="hover:text-blue-500 glow-link">Education</a></li>
-      <li><a href="#experience" class="hover:text-blue-500 glow-link">Experience</a></li>
-      <li><a href="#projects" class="hover:text-blue-500 glow-link">Projects</a></li>
-      <li><a href="#extracurriculars" class="hover:text-blue-500 glow-link">Extracurriculars</a></li>
+      <li><a href="#hero" class="text-white hover:text-blue-500 glow-link">Home</a></li>
+      <li><a href="#education" class="text-white hover:text-blue-500 glow-link">Education</a></li>
+      <li><a href="#projects" class="text-white hover:text-blue-500 glow-link">Projects</a></li>
+      <li><a href="#experience" class="text-white hover:text-blue-500 glow-link">Experience</a></li>
+      <li><a href="#extracurriculars" class="text-white hover:text-blue-500 glow-link">Extracurriculars</a></li>
     </ul>
   </nav>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-white mb-8">PROJECTS</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+          onclick="window.open('https://github.com/PradyumnaBada/Stock-forecasting', '_blank')"
+        >
+          <img src="forecasting.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+          <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">STOCK FORECASTING</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Developed an interactive app for predicting stock prices using sentiment analysis of financial news.
+            </p>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+          onclick="window.open('https://huggingface.co/spaces/Pradyumnabada/Milling_Machine', '_blank')"
+        >
+          <img src="milling_machine_ai.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+          <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">PREDICTIVE MAINTENANCE</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Designed an ML model to predict failures in industrial milling machines, reducing downtime.
+            </p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+            onclick="window.open('https://github.com/PradyumnaBada/Twitter_Sentiment_Analysis', '_blank')"
+            >
+            <img src="tweet_disaster.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+            <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">DISASTER TWEETS</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Built a machine learning model to classify tweets related to disasters for emergency response planning.
+            </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+
 
 <!-- Experience Section -->
 <section id="experience" class="py-16 section-bg relative" style="background-image: url('experience_2.jpg'); background-size: cover; background-position: center;">
@@ -253,7 +307,7 @@
           <div class="content p-6 rounded-lg shadow-lg relative transition-all duration-300 hover:bg-white/20 hover:border-white" 
                style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.6); box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);">
             <img src="Sapiens_logo.jpg" alt="Sapiens Logo" class="absolute top-8 right-4 h-12 w-auto"> <!-- Lowered logo -->
-            <h3 class="text-2xl font-bold text-[#FDF5E6] drop-shadow-lg text-left" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">SQL Developer</h3>
+            <h3 class="text-2xl font-bold text-[#FDF5E6] drop-shadow-lg text-left" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Software Developer</h3>
             <p class="text-xl font-semibold text-[#FDF5E6] drop-shadow-md text-left" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Sapiens International Corporation</p>
             <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4 text-left" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Mar 2021 – Nov 2022</p>
             <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold">
@@ -288,56 +342,7 @@
 
 
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16 bg-gray-800">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold text-white mb-8">PROJECTS</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Project 1 -->
-        <div
-          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
-          onclick="window.open('https://github.com/PradyumnaBada/Stock-forecasting', '_blank')"
-        >
-          <img src="forecasting.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
-          <div class="absolute inset-x-0 bottom-4 text-center">
-            <p class="text-white text-lg font-bold">STOCK FORECASTING</p>
-            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
-              Developed an interactive app for predicting stock prices using sentiment analysis of financial news.
-            </p>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div
-          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
-          onclick="window.open('https://huggingface.co/spaces/Pradyumnabada/Milling_Machine', '_blank')"
-        >
-          <img src="milling_machine_ai.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
-          <div class="absolute inset-x-0 bottom-4 text-center">
-            <p class="text-white text-lg font-bold">PREDICTIVE MAINTENANCE</p>
-            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
-              Designed an ML model to predict failures in industrial milling machines, reducing downtime.
-            </p>
-          </div>
-        </div>
-        <!-- Project 3 -->
-        <div
-          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
-            onclick="window.open('https://github.com/PradyumnaBada/Twitter_Sentiment_Analysis', '_blank')"
-            >
-            <img src="tweet_disaster.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
-            <div class="absolute inset-x-0 bottom-4 text-center">
-            <p class="text-white text-lg font-bold">DISASTER TWEETS</p>
-            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
-              Built a machine learning model to classify tweets related to disasters for emergency response planning.
-            </p>
-            </div>
-            </div>
-            </div>
-            </div>
-            </section>
+
 
         <!-- Extracurriculars Section -->
         <section id="extracurriculars" class="py-16 section-bg relative" style="background-image: url('extra_1.jpg');">
@@ -351,7 +356,7 @@
                     <ul class="list-disc text-left pl-6">
                       <li class="text-gray-200 mb-4"> Completed certification courses like Applied Machine Learning, Applied Plotting & Data Representation in Python, and more.</li>
                       <li class="text-gray-200 mb-4">Organized multiple treks to the Great Himalayan Ranges for groups of more than 10.</li>
-                      <li class="text-gray-200 mb-4">Directed and acted in short films, cover songs, and created travel vlogs.</li>
+                      <li class="text-gray-200 mb-4">Collaborated on creative projects, including short films & travel vlogs."</li>
                       <li class="text-gray-200 mb-4">Sapiens WOW Performer (2021) & Sapiens Best Singer - L&P Division (2021). </li>
                     </ul>
                   </div>
