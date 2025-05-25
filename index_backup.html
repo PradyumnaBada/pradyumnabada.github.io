@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradyumna Bada | Portfolio</title>
+  <meta property="og:title" content="Pradyumna Bada | Portfolio">
+  <meta property="og:description" content="Welcome to Pradyumna Bada's personal website. Explore my portfolio, projects, and experience.">
+  <meta property="og:image" content="AI_gen_2.jpg">
+  <meta property="og:url" content="https://pradyumnabada.github.io/">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 2rem 0;
+      width: 90%;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #2563eb;
+    }
+    .timeline-item {
+      display: flex;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    .timeline-item:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    .timeline-item .timeline-dot {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      background: #2563eb;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    .timeline-item .content {
+      width: 45%;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+    }
+    .timeline-item:nth-child(odd) .content {
+      text-align: right;
+    }
+
+    .section-bg {
+      background-size: cover;
+      background-position: center;
+    }
+    .section-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    }
+
+    .neon-text {
+      color: #fff;
+      text-shadow: 0 0 5px #4F46E5, 0 0 10px #4F46E5, 0 0 20px #4F46E5;
+    }
+
+    .neon-button {
+      background: rgba(79, 70, 229, 0.2);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(79, 70, 229, 0.3), 0 0 20px rgba(79, 70, 229, 0.2);
+      backdrop-filter: blur(40px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s;
+    }
+    .neon-button:hover {
+      background: #4F46E5;
+      box-shadow: 0 0 10px #4F46E5, 0 0 20px #4F46E5;
+    }
+
+    .glow-link {
+      position: relative;
+    }
+    .glow-link:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background: #4F46E5;
+      box-shadow: 0 0 8px #4F46E5;
+    }
+    </style>
+    </head>
+    <body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Hero Section -->
+    <header id="hero" class="h-screen section-bg" style="background-image: url('AI_gen_2.jpg');">
+    <div class="bg-overlay w-full h-full flex items-center justify-center">
+    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center"> <!-- Adjusted from bottom-32 to bottom-20 -->
+      <h1 class="text-5xl font-bold neon-text">PRADYUMNA BADA</h1>
+      <p class="text-xl mt-4 neon-text" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+      Data Scientist | Industrial Engineer | Problem Solver
+      </p>
+      </p>
+      <a href="Pradyumna_Resume_.pdf" 
+        class="mt-2 mb-6 inline-block neon-button font-semibold py-3 px-6 rounded-lg" 
+        download="Pradyumna Resume.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        Download CV
+      </a>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+<div class="absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-6 rounded-lg w-10/12 max-w-5xl backdrop-blur-md transition duration-300 hover:backdrop-brightness-125" style="background: rgba(255, 255, 255, 0.1); box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.3);">
+  <p class="text-white text-lg leading-relaxed text-justify font-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+    I am Pradyumna Bada, a master’s student at <a href="https://grainger.illinois.edu/" target="_blank" class="text-blue-400 hover:underline">UIUC</a>, specializing in <a href="http://catalog.illinois.edu/graduate/engineering/concentration/advanced-analytics-industrial-enterprise-systems-engineering/" target="_blank" class="text-blue-400 hover:underline">Advanced Analytics</a>. I have previously worked at Seagate, Sapiens, and RailTEC, where I contributed to data management, process optimization, and AI-driven automation to enhance efficiency and innovation. I love solving challenging problems and look forward to applying my expertise to help organizations thrive in a data-driven world.
+  </p>
+</div>
+
+
+  
+  
+  
+<!-- Education Section -->
+<section id="education" class="relative h-[110vh] section-bg" style="background-image: url('UIUC.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="relative z-10 container mx-auto text-center pt-36 pb-24" style="transform: translateY(5%);">
+    <h2 class="text-4xl font-bold text-white mb-12" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">EDUCATION</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Master's Card -->
+      <div class="backdrop-blur-md bg-white/5 p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300 max-w-lg mx-auto" style="opacity: 0.85; border: 1px solid rgba(255, 255, 255, 0.2); min-height: 20rem;">
+        <h3 class="text-2xl font-semibold text-white" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Master’s in Advanced Analytics</h3>
+        <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">University of Illinois at Urbana-Champaign</p>
+        <p class="text-gray-200 text-sm" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduation: May 2025</p>
+        <p class="text-gray-200 font-semibold mt-4" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Courses:</p>
+        <ul class="text-gray-300 list-disc list-inside space-y-1" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">
+          <li>Advanced Data Analytics</li>
+          <li>Optimization Techniques</li>
+          <li>Data Mining</li>
+          <li>Deep Learning</li>
+        </ul>
+      </div>
+      <!-- Bachelor's Card -->
+      <div class="backdrop-blur-md bg-white/5 p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300 max-w-lg mx-auto" style="opacity: 0.85; border: 1px solid rgba(255, 255, 255, 0.2); min-height: 20rem;">
+        <h3 class="text-2xl font-semibold text-white" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Bachelor’s in Industrial Engineering</h3>
+        <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">JSS Science and Technology University</p>
+        <p class="text-gray-200 text-sm" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduated: June 2020</p>
+        <p class="text-gray-200 font-semibold mt-4" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Courses:</p>
+        <ul class="text-gray-300 list-disc list-inside space-y-1" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">
+          <li>Linear Algebra</li>
+          <li>C Programming</li>
+          <li>Supply Chain Management</li>
+          <li>Statistical Quality Control</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+  <!-- Navigation -->
+  <nav class="bg-[#001f3f] shadow-md fixed top-0 w-full z-50">
+    <ul class="flex justify-center space-x-6 py-4">
+      <li><a href="#hero" class="text-white hover:text-blue-500 glow-link">Home</a></li>
+      <li><a href="#education" class="text-white hover:text-blue-500 glow-link">Education</a></li>
+      <li><a href="#projects" class="text-white hover:text-blue-500 glow-link">Projects</a></li>
+      <li><a href="#experience" class="text-white hover:text-blue-500 glow-link">Experience</a></li>
+      <li><a href="#extracurriculars" class="text-white hover:text-blue-500 glow-link">Extracurriculars</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-white mb-8">PROJECTS</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+          onclick="window.open('https://github.com/PradyumnaBada/Stock-forecasting', '_blank')"
+        >
+          <img src="forecasting.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+          <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">STOCK FORECASTING</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Developed an interactive app for predicting stock prices using sentiment analysis of financial news.
+            </p>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+          onclick="window.open('https://huggingface.co/spaces/Pradyumnabada/Milling_Machine', '_blank')"
+        >
+          <img src="milling_machine_ai.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+          <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">PREDICTIVE MAINTENANCE</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Designed an ML model to predict failures in industrial milling machines, reducing downtime.
+            </p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg"
+            onclick="window.open('https://github.com/PradyumnaBada/Twitter_Sentiment_Analysis', '_blank')"
+            >
+            <img src="tweet_disaster.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
+            <div class="absolute inset-x-0 bottom-4 text-center">
+            <p class="text-white text-lg font-bold">DISASTER TWEETS</p>
+            <p class="text-gray-300 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+              Built a machine learning model to classify tweets related to disasters for emergency response planning.
+            </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+
+
+<!-- Experience Section -->
+<section id="experience" class="py-16 section-bg relative" style="background-image: url('experience_2.jpg'); background-size: cover; background-position: center;">
+  <div class="section-overlay w-full h-full flex items-center justify-center">
+    <div class="container mx-auto text-center text-[#FDF5E6]">
+      <h2 class="text-4xl font-bold mb-8 text-[#FDF5E6] drop-shadow-lg" style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);">EXPERIENCE</h2>
+      <div class="timeline">
+        <!-- Experience 1: Cline Center -->
+        <div class="timeline-item">
+          <div class="content p-6 rounded-lg shadow-lg relative transition-all duration-300 hover:bg-white/20 hover:border-white" 
+               style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.6); box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);">
+            <img src="cline_center_logo.png" alt="Cline Center Logo" class="absolute top-8 left-4 h-12 w-auto"> <!-- Lowered logo -->
+            <h3 class="text-2xl font-bold text-[#FDF5E6] drop-shadow-lg" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Research Assistant</h3>
+            <p class="text-xl font-semibold text-[#FDF5E6] drop-shadow-md" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Cline Center for Advanced Social Research</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Sep 2023 – Present</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold">
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Leveraged LLMs to extract structured data from unstructured text (news articles), specifically tracking police use of lethal force.</li>
+              <div id="cline-more" class="hidden">
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Specialized in data cleaning, analysis, schema design, <strong>DDL</strong>, <strong>DML</strong>. Built a national dashboard using <strong>MySQL</strong> & <strong>Power BI</strong>.</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Built retrieval models using embeddings for ranking data and clustering articles to automate the data extraction process.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('cline-more', this)" class="text-blue-400 hover:underline drop-shadow-md" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <!-- Experience 2: Seagate -->
+        <div class="timeline-item">
+          <div class="content p-6 rounded-lg shadow-lg relative text-left transition-all duration-300 hover:bg-white/20 hover:border-white" 
+               style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.6); box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);">
+            <img src="seagate_logo.jpg" alt="Seagate Logo" class="absolute top-8 right-4 h-12 w-auto"> <!-- Lowered logo -->
+            <h3 class="text-2xl font-bold text-[#FDF5E6] drop-shadow-lg" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Data Analyst Intern</h3>
+            <p class="text-xl font-semibold text-[#FDF5E6] drop-shadow-md" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Seagate Technology</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">May 2024 – Aug 2024</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold">
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Analyzed Volume Data using statistical tools and data visualization to help characterize emerging memories.</li>
+              <div id="seagate-more" class="hidden">
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Developed <strong>Python</strong>-based automation & reporting systems, utilizing <strong>Jenkins</strong>, <strong>GitLab</strong>, and other technologies to streamline operations.</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Calculated failure metrics, including Bit Error Rates across address levels, and modeled CFR to predict potential failures.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('seagate-more', this)" class="text-blue-400 hover:underline drop-shadow-md" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <!-- Experience 3: RailTEC -->
+        <div class="timeline-item">
+          <div class="content p-6 rounded-lg shadow-lg relative transition-all duration-300 hover:bg-white/20 hover:border-white" 
+               style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.6); box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);">
+            <img src="railtec_logo.jpg" alt="RailTEC Logo" class="absolute top-8 left-4 h-12 w-auto"> <!-- Lowered logo -->
+            <h3 class="text-2xl font-bold text-[#FDF5E6] drop-shadow-lg" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Summer Research Intern</h3>
+            <p class="text-xl font-semibold text-[#FDF5E6] drop-shadow-md" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">RailTEC at Illinois</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">May 2023 – Aug 2023</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold">
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Implemented <strong>Big Data Analytics</strong> to ensure safe railway operations, by using <strong>LRAIL</strong>, an AI-based system for Visual Track Inspection.</li>
+              <div id="railtec-more" class="hidden">
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Analyzed periodic data to track & forecast the health of rail components by leveraging <strong>PySpark</strong> and <strong>MS Azure Synapse Analytics</strong>.</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Visualized data with <strong>Power BI</strong> and <strong>Python</strong> to provide actionable insights for efficient decision-making.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('railtec-more', this)" class="text-blue-400 hover:underline drop-shadow-md" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <!-- Experience 4: Sapiens -->
+        <div class="timeline-item">
+          <div class="content p-6 rounded-lg shadow-lg relative transition-all duration-300 hover:bg-white/20 hover:border-white" 
+               style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.6); box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);">
+            <img src="Sapiens_logo.jpg" alt="Sapiens Logo" class="absolute top-8 right-4 h-12 w-auto"> <!-- Lowered logo -->
+            <h3 class="text-2xl font-bold text-[#FDF5E6] drop-shadow-lg text-left" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Software Developer</h3>
+            <p class="text-xl font-semibold text-[#FDF5E6] drop-shadow-md text-left" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Sapiens International Corporation</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4 text-left" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Mar 2021 – Nov 2022</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold">
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Enhanced our Insurtech product using <strong>Oracle SQL</strong> and <strong>ETL</strong>, helping companies administer legacy <strong>Insurance</strong> products.</li>
+              <div id="sapiens-more" class="hidden">
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Expertly managed datasets encompassing policy, claims, customer, and fund prices, and crafted complex SQL data fix scripts.</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Developed reporting interfaces using <strong>SQL</strong> and <strong>Shell Scripting</strong>, including 'ECASS,' a cache facility designed for the client’s actuarial team.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('sapiens-more', this)" class="text-blue-400 hover:underline drop-shadow-md" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleDetails(id, button) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+      element.classList.remove('hidden');
+      button.textContent = "Less";
+    } else {
+      element.classList.add('hidden');
+      button.textContent = "More";
+    }
+  }
+</script>
+
+
+
+
+
+
+        <!-- Extracurriculars Section -->
+        <section id="extracurriculars" class="py-16 section-bg relative" style="background-image: url('extra_1.jpg');">
+          <div class="section-overlay w-full h-full flex items-center justify-center">
+            <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-bold mb-8 text-white">EXTRACURRICULARS</h2>
+              <div class="grid grid-cols-12 gap-6">
+                <!-- Main content on the left -->
+                <div class="col-span-9">
+                  <div class="p-6 rounded-lg shadow-lg ml-[100px] w-3/4 h-[250px] mt-16" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <ul class="list-disc text-left pl-6">
+                      <li class="text-gray-200 mb-4"> Completed certification courses like Applied Machine Learning, Applied Plotting & Data Representation in Python, and more.</li>
+                      <li class="text-gray-200 mb-4">Organized multiple treks to the Great Himalayan Ranges for groups of more than 10.</li>
+                      <li class="text-gray-200 mb-4">Collaborated on creative projects, including short films & travel vlogs."</li>
+                      <li class="text-gray-200 mb-4">Sapiens WOW Performer (2021) & Sapiens Best Singer - L&P Division (2021). </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Videos on the right -->
+                <div class="col-span-3 flex flex-col space-y-6">
+                  <iframe class="rounded-lg shadow-lg" width="100%" height="200" src="https://www.youtube.com/embed/bptLk0r8qOE" allowfullscreen></iframe>
+                  <iframe class="rounded-lg shadow-lg" width="100%" height="200" src="https://www.youtube.com/embed/nWwHes5_eGA" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6">
+  <p class="text-center">&copy; 2025 Pradyumna Bada | Connect with me on <a href="https://www.linkedin.com" class="text-blue-400">LinkedIn</a></p>
+  <p class="text-center mt-2">Contact: <a href="mailto:pbada2@illinois.edu" class="text-blue-400">pbada2@illinois.edu</a> | Phone: +1 (217) 200-3976</p>
+  <p class="text-center text-gray-400 mt-4">Credit: Website designed with the help of GitHub Copilot and ChatGPT.</p>
+</footer>
+
+</body>
+</html>
+

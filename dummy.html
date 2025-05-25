@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Development | Pradyumna Bada</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Common styles from index.html - Hero gradient overlay */
+    .section-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
+    }
+    /* Neon text and button */
+    .neon-text {
+      color: #fff;
+      text-shadow: 0 0 5px #4F46E5, 0 0 10px #4F46E5, 0 0 20px #4F46E5;
+    }
+    .neon-button {
+      background: rgba(79, 70, 229, 0.2);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(79, 70, 229, 0.3), 0 0 20px rgba(79, 70, 229, 0.2);
+      backdrop-filter: blur(40px);
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all 0.3s;
+    }
+    .neon-button:hover {
+      background: #4F46E5;
+      box-shadow: 0 0 10px #4F46E5, 0 0 20px #4F46E5;
+    }
+    .glow-link {
+      position: relative;
+    }
+    .glow-link:hover::after {
+      content: "";
+      position: absolute; left: 0; bottom: -5px; /* Adjusted from -2px to match index.html */
+      width: 100%; height: 2px;
+      background: #4F46E5; box-shadow: 0 0 8px #4F46E5;
+    }
+    /* Add other common styles from index.html if needed */
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- NAV -->
+  <nav class="bg-white shadow-md fixed top-0 w-full z-50"> <!-- Matched nav style from index.html -->
+    <ul class="flex justify-center space-x-6 py-4">
+      <li><a href="index.html#hero" class="hover:text-blue-500 glow-link">Home</a></li>
+      <li><a href="index.html#education" class="hover:text-blue-500 glow-link">Education</a></li>
+      <li><a href="index.html#experience" class="hover:text-blue-500 glow-link">Experience</a></li>
+      <li><a href="index.html#projects" class="hover:text-blue-500 glow-link">Projects</a></li>
+      <li><a href="index.html#extracurriculars" class="hover:text-blue-500 glow-link">Extracurriculars</a></li>
+      <!-- Link to this dummy page if needed, or keep it simple -->
+    </ul>
+  </nav>
+
+  <!-- Under Development Section -->
+  <section id="under-development" class="min-h-screen flex items-center justify-center bg-gray-800 px-4 sm:px-8 lg:px-16 pt-16"> <!-- Added pt-16 for nav offset -->
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4 neon-text">Page Under Development</h1>
+      <p class="text-xl text-gray-300 mb-8">
+        This section is currently being worked on. Please check back soon!
+      </p>
+      <a href="index.html" 
+         class="inline-block neon-button font-semibold py-3 px-6 rounded-lg">
+        Go Back to Home
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p class="text-center">&copy; 2025 Pradyumna Bada | Connect with me on <a href="https://www.linkedin.com" class="text-blue-400">LinkedIn</a></p>
+    <p class="text-center mt-2">Contact: <a href="mailto:pbada2@illinois.edu" class="text-blue-400">pbada2@illinois.edu</a> | Phone: +1 (217) 200-3976</p>
+    <p class="text-center text-gray-400 mt-4">Credit: Website designed with the help of GitHub Copilot and ChatGPT.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradyumna Bada | Portfolio</title>
+  <meta property="og:title" content="Pradyumna Bada | Portfolio">
+  <meta property="og:description" content="Welcome to Pradyumna Bada's personal website. Explore my portfolio, projects, and experience.">
+  <meta property="og:image" content="AI_gen_2.jpg">
+  <meta property="og:url" content="https://pradyumnabada.github.io/">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 2rem 0;
+      width: 90%;
+      max-width: 1000px; /* Added max-width for better control on large screens */
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #2563eb; /* Tailwind's blue-600 */
+    }
+    .timeline-item {
+      display: flex;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    .timeline-item:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    .timeline-item .timeline-dot {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%; /* Adjusted for better vertical alignment, may need tweaking */
+      background: #2563eb; /* Tailwind's blue-600 */
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      z-index: 10;
+      border: 3px solid #f0f0f0; /* Optional: Add border to match background */
+    }
+    .timeline-item .content {
+      width: 45%;
+      background: rgba(255, 255, 255, 0.2); 
+      backdrop-filter: blur(10px); 
+      border: 2px solid rgba(255, 255, 255, 0.6); 
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem; /* 8px */
+      padding: 1.5rem; /* 24px */
+      position: relative; /* Needed for absolute positioning of logos */
+      transition: all 0.3s; 
+    }
+    .timeline-item .content:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: white;
+    }
+
+    .timeline-item:nth-child(odd) .content {
+      /* Text alignment is handled by Tailwind classes now if needed */
+    }
+    
+    /* Logos inside timeline content */
+     .timeline-item .content .logo {
+        position: absolute;
+        top: 1.5rem; /* Adjusted from top-8 */
+        height: 3rem; /* Adjusted from h-12 */
+        width: auto;
+     }
+     .timeline-item:nth-child(odd) .content .logo {
+         left: 1rem; /* Adjusted from left-4 */
+     }
+     .timeline-item:nth-child(even) .content .logo {
+         right: 1rem; /* Adjusted from right-4 */
+     }
+
+
+    /* === START: Mobile Responsiveness for Timeline === */
+    @media (max-width: 768px) { /* Apply styles for screens 768px wide or less */
+      .timeline::before {
+        left: 1.25rem; /* Position line to the left */
+        transform: translateX(-50%); /* Center the 4px line on the 1.25rem mark */
+      }
+      .timeline-item,
+      .timeline-item:nth-child(odd) {
+        flex-direction: column; /* Stack items vertically */
+         padding-left: 3rem; /* Create space for the dot and line */
+         align-items: flex-start; /* Align content to the start */
+          margin-bottom: 2rem; /* Adjust spacing */
+      }
+       .timeline-item .content {
+         width: 100%; /* Content takes full available width */
+         text-align: left !important; /* Force left alignment */
+         margin-left: 0; /* Remove specific margin, padding-left on item handles spacing */
+         margin-top: 1rem; /* Add space between dot and content box */
+      }
+      .timeline-item .timeline-dot {
+        left: 1.25rem; /* Align dot with the line */
+        top: 0; /* Position dot at the top of the item */
+        transform: translate(-50%, 0); /* Adjust transform for top alignment */
+      }
+
+      /* Adjust logo position for mobile */
+       .timeline-item .content .logo {
+         position: relative; /* Make logo flow with content */
+         top: auto;
+         left: auto;
+         right: auto;
+         height: 2rem; /* Smaller logo */
+         margin-bottom: 0.5rem; /* Space below logo */
+       }
+    }
+    /* === END: Mobile Responsiveness for Timeline === */
+
+    .section-bg {
+      background-size: cover;
+      background-position: center;
+    }
+    .section-overlay {
+      /* Using Tailwind rgba syntax for consistency */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    }
+
+    .neon-text {
+      color: #fff;
+      text-shadow: 0 0 5px #4F46E5, 0 0 10px #4F46E5, 0 0 20px #4F46E5;
+    }
+
+    .neon-button {
+      background: rgba(79, 70, 229, 0.2); /* Indigo-600 with alpha */
+      color: #fff;
+      box-shadow: 0 0 10px rgba(79, 70, 229, 0.3), 0 0 20px rgba(79, 70, 229, 0.2);
+      backdrop-filter: blur(10px); /* Reduced blur slightly */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s;
+    }
+    .neon-button:hover {
+      background: #4F46E5; /* Indigo-600 */
+      box-shadow: 0 0 10px #4F46E5, 0 0 20px #4F46E5;
+    }
+
+    .glow-link {
+      position: relative;
+      text-decoration: none; /* Ensure no underline by default */
+       padding-bottom: 5px; /* Add padding for the glow effect */
+    }
+     .glow-link::after { /* Use ::after for the glow */
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0; /* Position at the bottom */
+      width: 100%;
+      height: 2px;
+      background: #4F46E5; /* Indigo-600 */
+      box-shadow: 0 0 8px #4F46E5;
+       opacity: 0; /* Hidden by default */
+       transition: opacity 0.3s ease; /* Smooth transition */
+    }
+    .glow-link:hover::after {
+       opacity: 1; /* Show on hover */
+    }
+    </style>
+    </head>
+    <body class="bg-gray-100 text-gray-800 font-sans">
+
+     <nav class="bg-[#001f3f] shadow-md fixed top-0 w-full z-50">
+         <ul class="flex justify-center space-x-4 md:space-x-6 py-4 px-4"> {/* Added padding */}
+             <li><a href="#hero" class="text-white hover:text-blue-400 glow-link text-sm md:text-base">Home</a></li>
+             <li><a href="#education" class="text-white hover:text-blue-400 glow-link text-sm md:text-base">Education</a></li>
+             <li><a href="#projects" class="text-white hover:text-blue-400 glow-link text-sm md:text-base">Projects</a></li>
+             <li><a href="#experience" class="text-white hover:text-blue-400 glow-link text-sm md:text-base">Experience</a></li>
+             <li><a href="#extracurriculars" class="text-white hover:text-blue-400 glow-link text-sm md:text-base">Extracurriculars</a></li>
+         </ul>
+     </nav>
+
+
+    <header id="hero" class="h-screen section-bg flex items-center justify-center" style="background-image: url('AI_gen_2.jpg');">
+        {/* Overlay applied via Tailwind below for potentially better control */}
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80"></div> 
+        <div class="relative text-center px-4"> {/* Added relative positioning and padding */}
+            <h1 class="text-4xl sm:text-5xl font-bold neon-text">PRADYUMNA BADA</h1>
+            <p class="text-lg sm:text-xl mt-4 neon-text inline-block" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+                Data Scientist | Industrial Engineer | Problem Solver
+            </p>
+            <div class="mt-6"> {/* Added a div for button spacing */}
+                <a href="Pradyumna_Resume_.pdf" 
+                    class="inline-block neon-button font-semibold py-3 px-6 rounded-lg text-sm sm:text-base" 
+                    download="Pradyumna Resume.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    {/* About Section - Adjusted position to flow better */}
+    <section id="about" class="relative -mt-24 z-10 pb-16"> {/* Pull up slightly, add bottom padding */}
+         <div class="container mx-auto px-4"> {/* Added container and padding */}
+            <div class="p-6 rounded-lg w-full max-w-5xl mx-auto backdrop-blur-md transition duration-300 hover:backdrop-brightness-125" style="background: rgba(255, 255, 255, 0.1); box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.3);">
+                <p class="text-white text-base md:text-lg leading-relaxed text-justify font-semibold" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);"> {/* Adjusted font weight/shadow */}
+                    I am Pradyumna Bada, a master’s student at <a href="https://grainger.illinois.edu/" target="_blank" class="text-blue-400 hover:underline">UIUC</a>, specializing in <a href="http://catalog.illinois.edu/graduate/engineering/concentration/advanced-analytics-industrial-enterprise-systems-engineering/" target="_blank" class="text-blue-400 hover:underline">Advanced Analytics</a>. I have previously worked at Seagate, Sapiens, and RailTEC, where I contributed to data management, process optimization, and AI-driven automation to enhance efficiency and innovation. I love solving challenging problems and look forward to applying my expertise to help organizations thrive in a data-driven world.
+                </p>
+            </div>
+         </div>
+    </section>
+
+  
+  
+<section id="education" class="relative py-16 md:py-24 section-bg" style="background-image: url('UIUC.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-black/50"></div> {/* Slightly darker overlay */}
+  <div class="relative z-10 container mx-auto text-center px-4"> {/* Added padding */}
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">EDUCATION</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"> {/* Added max-width */}
+      <div class="backdrop-blur-md bg-white/10 p-6 md:p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300" style="border: 1px solid rgba(255, 255, 255, 0.2); min-height: 18rem;"> {/* Adjusted padding/min-height */}
+        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Master’s in Advanced Analytics</h3>
+        <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">University of Illinois at Urbana-Champaign</p>
+        <p class="text-gray-300 text-sm mb-4" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduation: May 2025</p>
+        <p class="text-gray-200 font-semibold mt-4" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Courses:</p>
+        <ul class="text-gray-300 list-disc list-inside space-y-1 text-left text-sm md:text-base" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"> {/* Made list left-aligned */}
+          <li>Advanced Data Analytics</li>
+          <li>Optimization Techniques</li>
+          <li>Data Mining</li>
+          <li>Deep Learning</li>
+        </ul>
+      </div>
+      <div class="backdrop-blur-md bg-white/10 p-6 md:p-8 rounded-lg shadow-lg hover:bg-white/20 transition duration-300" style="border: 1px solid rgba(255, 255, 255, 0.2); min-height: 18rem;"> {/* Adjusted padding/min-height */}
+        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Bachelor’s in Industrial Engineering</h3>
+        <p class="text-gray-200 font-semibold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">JSS Science and Technology University</p>
+        <p class="text-gray-300 text-sm mb-4" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Graduated: June 2020</p>
+        <p class="text-gray-200 font-semibold mt-4" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Courses:</p>
+        <ul class="text-gray-300 list-disc list-inside space-y-1 text-left text-sm md:text-base" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"> {/* Made list left-aligned */}
+          <li>Linear Algebra</li>
+          <li>C Programming</li>
+          <li>Supply Chain Management</li>
+          <li>Statistical Quality Control</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+
+
+  <section id="projects" class="py-16 bg-gray-800">
+    <div class="container mx-auto text-center px-4"> {/* Added padding */}
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">PROJECTS</h2> {/* Increased bottom margin */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> {/* Increased gap */}
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg transform transition duration-300 hover:scale-105" /* Added hover effect */
+          onclick="window.open('https://github.com/PradyumnaBada/Stock-forecasting', '_blank')"
+        >
+          <img src="forecasting.jpg" alt="Stock Forecasting Project" class="w-full h-48 object-cover"> {/* Fixed height */}
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div> {/* Adjusted gradient */}
+          <div class="absolute inset-x-0 bottom-0 p-4"> {/* Added padding */}
+            <p class="text-white text-lg font-bold">STOCK FORECASTING</p>
+            <p class="text-gray-300 text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"> {/* Adjusted spacing/timing */}
+              Interactive app predicting stock prices using sentiment analysis.
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg transform transition duration-300 hover:scale-105" /* Added hover effect */
+          onclick="window.open('https://huggingface.co/spaces/Pradyumnabada/Milling_Machine', '_blank')"
+        >
+          <img src="milling_machine_ai.jpg" alt="Predictive Maintenance Project" class="w-full h-48 object-cover"> {/* Fixed height */}
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div> {/* Adjusted gradient */}
+          <div class="absolute inset-x-0 bottom-0 p-4"> {/* Added padding */}
+            <p class="text-white text-lg font-bold">PREDICTIVE MAINTENANCE</p>
+            <p class="text-gray-300 text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"> {/* Adjusted spacing/timing */}
+              ML model predicting failures in industrial milling machines.
+            </p>
+          </div>
+        </div>
+        <div
+            class="relative group overflow-hidden rounded-lg cursor-pointer shadow-lg transform transition duration-300 hover:scale-105" /* Added hover effect */
+            onclick="window.open('https://github.com/PradyumnaBada/Twitter_Sentiment_Analysis', '_blank')"
+            >
+            <img src="tweet_disaster.jpg" alt="Disaster Tweets Project" class="w-full h-48 object-cover"> {/* Fixed height */}
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div> {/* Adjusted gradient */}
+            <div class="absolute inset-x-0 bottom-0 p-4"> {/* Added padding */}
+            <p class="text-white text-lg font-bold">DISASTER TWEETS</p>
+            <p class="text-gray-300 text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"> {/* Adjusted spacing/timing */}
+              Classifying disaster-related tweets for emergency response.
+            </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+
+
+<section id="experience" class="py-16 section-bg relative" style="background-image: url('experience_2.jpg'); background-size: cover; background-position: center;">
+  {/* Overlay using Tailwind */}
+  <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80"></div> 
+  <div class="relative z-10 container mx-auto text-center px-4"> {/* Added padding */}
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-[#FDF5E6] drop-shadow-lg" style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);">EXPERIENCE</h2>
+      <div class="timeline"> {/* The custom CSS including the media query handles responsiveness here */}
+        
+        <div class="timeline-item">
+           <div class="content"> {/* Base styles applied via CSS */}
+             <img src="cline_center_logo.png" alt="Cline Center Logo" class="logo"> {/* Logo positioning handled by CSS */}
+            <h3 class="text-xl md:text-2xl font-bold text-[#FDF5E6] drop-shadow-lg mb-1" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Research Assistant</h3>
+            <p class="text-lg md:text-xl font-semibold text-[#FDF5E6] drop-shadow-md" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Cline Center for Advanced Social Research</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Sep 2023 – Present</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold text-sm md:text-base space-y-1"> {/* Adjusted text size/spacing */}
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Leveraged LLMs to extract structured data from news articles, tracking police use of lethal force.</li>
+              <div id="cline-more" class="hidden space-y-1"> {/* Added spacing for hidden items */}
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Specialized in data cleaning, analysis, schema design (<strong>DDL</strong>, <strong>DML</strong>). Built dashboard using <strong>MySQL</strong> & <strong>Power BI</strong>.</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Built retrieval models using embeddings for ranking data and clustering articles.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('cline-more', this)" class="text-blue-400 hover:underline drop-shadow-md mt-2 text-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item">
+           <div class="content"> {/* Base styles applied via CSS */}
+             <img src="seagate_logo.jpg" alt="Seagate Logo" class="logo"> {/* Logo positioning handled by CSS */}
+            <h3 class="text-xl md:text-2xl font-bold text-[#FDF5E6] drop-shadow-lg mb-1" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Data Analyst Intern</h3>
+            <p class="text-lg md:text-xl font-semibold text-[#FDF5E6] drop-shadow-md" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Seagate Technology</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">May 2024 – Aug 2024</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold text-sm md:text-base space-y-1"> {/* Adjusted text size/spacing */}
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Analyzed Volume Data using statistical tools and visualization to characterize emerging memories.</li>
+              <div id="seagate-more" class="hidden space-y-1"> {/* Added spacing for hidden items */}
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Developed <strong>Python</strong> automation & reporting systems (<strong>Jenkins</strong>, <strong>GitLab</strong>).</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Calculated failure metrics (Bit Error Rates) and modeled CFR to predict potential failures.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('seagate-more', this)" class="text-blue-400 hover:underline drop-shadow-md mt-2 text-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item">
+           <div class="content"> {/* Base styles applied via CSS */}
+             <img src="railtec_logo.jpg" alt="RailTEC Logo" class="logo"> {/* Logo positioning handled by CSS */}
+             <h3 class="text-xl md:text-2xl font-bold text-[#FDF5E6] drop-shadow-lg mb-1" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Summer Research Intern</h3>
+            <p class="text-lg md:text-xl font-semibold text-[#FDF5E6] drop-shadow-md" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">RailTEC at Illinois</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">May 2023 – Aug 2023</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold text-sm md:text-base space-y-1"> {/* Adjusted text size/spacing */}
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Implemented <strong>Big Data Analytics</strong> for railway safety using <strong>LRAIL</strong> (AI Visual Track Inspection).</li>
+              <div id="railtec-more" class="hidden space-y-1"> {/* Added spacing for hidden items */}
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Analyzed data to track & forecast rail component health (<strong>PySpark</strong>, <strong>Azure Synapse</strong>).</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Visualized data with <strong>Power BI</strong> & <strong>Python</strong> for actionable insights.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('railtec-more', this)" class="text-blue-400 hover:underline drop-shadow-md mt-2 text-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="content"> {/* Base styles applied via CSS */}
+             <img src="Sapiens_logo.jpg" alt="Sapiens Logo" class="logo"> {/* Logo positioning handled by CSS */}
+            <h3 class="text-xl md:text-2xl font-bold text-[#FDF5E6] drop-shadow-lg mb-1" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">Software Developer</h3>
+            <p class="text-lg md:text-xl font-semibold text-[#FDF5E6] drop-shadow-md" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Sapiens International Corporation</p>
+            <p class="text-sm text-[#FDF5E6] drop-shadow-md mb-4" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);">Mar 2021 – Nov 2022</p>
+            <ul class="list-disc list-inside text-left text-[#FDF5E6] font-semibold text-sm md:text-base space-y-1"> {/* Adjusted text size/spacing */}
+              <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Enhanced Insurtech product using <strong>Oracle SQL</strong> & <strong>ETL</strong> for legacy Insurance products administration.</li>
+              <div id="sapiens-more" class="hidden space-y-1"> {/* Added spacing for hidden items */}
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Managed datasets (policy, claims, customer) and crafted complex SQL data fix scripts.</li>
+                <li class="drop-shadow-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">Developed reporting interfaces (<strong>SQL</strong>, <strong>Shell Scripting</strong>), including 'ECASS' cache facility.</li>
+              </div>
+            </ul>
+            <button onclick="toggleDetails('sapiens-more', this)" class="text-blue-400 hover:underline drop-shadow-md mt-2 text-sm" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">More</button>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<script>
+  function toggleDetails(id, button) {
+    const element = document.getElementById(id);
+    const isHidden = element.classList.contains('hidden');
+    
+    // Use maxHeight for smooth transition (optional, requires setting transition in CSS)
+    /* if (isHidden) {
+        element.classList.remove('hidden');
+        element.style.maxHeight = element.scrollHeight + "px"; // Set max-height for expansion
+        button.textContent = "Less";
+    } else {
+        element.style.maxHeight = "0"; // Collapse
+        // Use timeout to hide after transition completes
+        setTimeout(() => {
+             element.classList.add('hidden');
+        }, 300); // Match CSS transition duration
+        button.textContent = "More";
+    }
+    */
+    
+    // Simpler show/hide without animation:
+     if (isHidden) {
+       element.classList.remove('hidden');
+       button.textContent = "Less";
+     } else {
+       element.classList.add('hidden');
+       button.textContent = "More";
+     }
+  }
+</script>
+
+
+<section id="extracurriculars" class="py-16 section-bg relative" style="background-image: url('extra_1.jpg');">
+  {/* Overlay using Tailwind */}
+  <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div> 
+  <div class="relative z-10 container mx-auto text-center px-4"> {/* Added padding */}
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">EXTRACURRICULARS</h2> {/* Increased bottom margin */}
+      {/* === START: Responsive Grid for Extracurriculars === */}
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto"> {/* Use 1 col on mobile, 12 on large+; Increased gap; Added max-width */}
+          
+          {/* Main content: full width on mobile, 8 cols on large */}
+          <div class="lg:col-span-8 flex items-center"> {/* Added flex alignment */}
+              {/* Removed fixed margin, using grid gap now. Adjusted padding/background */}
+              <div class="p-6 rounded-lg shadow-lg w-full" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);"> 
+                  <ul class="list-disc text-left pl-5 space-y-3 text-gray-200 text-sm md:text-base"> {/* Adjusted list style/spacing/color */}
+                      <li>Completed certifications: Applied Machine Learning, Applied Plotting & Data Representation in Python, etc.</li>
+                      <li>Organized multiple treks to the Great Himalayan Ranges for groups of 10+.</li>
+                      <li>Collaborated on creative projects, including short films & travel vlogs.</li>
+                      <li>Awards: Sapiens WOW Performer (2021) & Sapiens Best Singer - L&P Division (2021).</li>
+                  </ul>
+              </div>
+          </div>
+
+          {/* Videos: full width on mobile, 4 cols on large */}
+          <div class="lg:col-span-4 flex flex-col space-y-6 justify-center"> {/* Added vertical centering */}
+             {/* Responsive iframe container */}
+             <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden"> 
+                 <iframe class="w-full h-full" src="https://www.youtube.com/embed/bptLk0r8qOE" title="YouTube video player 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+             <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden">
+                 <iframe class="w-full h-full" src="https://www.youtube.com/embed/nWwHes5_eGA" title="YouTube video player 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+      {/* === END: Responsive Grid for Extracurriculars === */}
+  </div>
+</section>
+
+
+<footer class="bg-gray-900 text-white py-8"> {/* Increased padding */}
+   <div class="container mx-auto text-center px-4"> {/* Added container and padding */}
+      <p class="text-sm md:text-base">© 2025 Pradyumna Bada</p>
+      <p class="mt-2 text-sm md:text-base">
+          Connect: <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">LinkedIn</a> | 
+          Contact: <a href="mailto:pbada2@illinois.edu" class="text-blue-400 hover:underline">pbada2@illinois.edu</a> | 
+          Phone: <a href="tel:+12172003976" class="text-blue-400 hover:underline">+1 (217) 200-3976</a>
+      </p>
+      <p class="text-center text-xs text-gray-500 mt-4">Credit: Website designed with the help of GitHub Copilot and ChatGPT.</p>
+   </div>
+</footer>
+
+</body>
+</html>
